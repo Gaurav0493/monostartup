@@ -1,0 +1,15 @@
+{
+    "name": "Mono repo",
+    "version": "0.0.0",
+    "scripts": {
+        "pre-commit": "pnpm run --filter \"@product/*\" pre-commit",
+        "prepare": "husky install",
+        "postinstall": "husky install"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "lint-staged": {
+        "**/*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --config ./.prettierrc.js --write"],
+        "**/*.{css,scss,md,html,json}": ["prettier --config ./.prettierrc.js --write"]
+    }
+}
